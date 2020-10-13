@@ -1,0 +1,7 @@
+# Custom
+.idea
+vendor
+
+
+# Results files and folders
+/results

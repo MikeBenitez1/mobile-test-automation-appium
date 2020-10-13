@@ -1,0 +1,5 @@
+# Cucumber profiles for automation execution
+
+# Generates a nice looking HTML report.
+default: --format pretty --format html --out results/reports/<%=ENV['DEVICE']%>/<%=Time.now.strftime('%F')%>/<%=Time.now.strftime('%H:%M:%S')%>_browser_report.html
+
