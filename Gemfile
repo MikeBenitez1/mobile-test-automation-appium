@@ -2,10 +2,13 @@
 
 source "https://rubygems.org"
 
-gem 'cucumber'
-gem 'appium_lib'
-gem 'appium_console'
-gem 'require_all'
-gem 'selenium-webdriver'
-gem 'dotenv'
-
+gem "cucumber", "~> 3.1.2"
+gem "appium_lib", "~>10.5.0"
+gem "appium_console", "~>2.12.0"
+gem "require_all"
+gem "colorize"
+gem "selenium-webdriver"
+gem "dotenv", "~>2.7.5"
+gem "test-unit"
+gem "rubocop"
+gem "standard"
