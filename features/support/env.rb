@@ -13,8 +13,8 @@ require_all "./config"
 require_all "./handlers"
 
 # To call these values from implicit timeouts on step definitions or pages
-# SHORT_TIME_OUT = 2
-# LONG_TIME_OUT = 10
+SHORT_TIME_OUT = 2
+LONG_TIME_OUT = 10
 
 # Setting the environment file
 ENV_FILE_PATH = "./config/#{ENV["DEVICE"]}.env"
