@@ -2,6 +2,13 @@
 .idea
 vendor
 
+# Used by dotenv library to load environment variables.
+*.env
+
+#App builds
+*.apk
+*.ipa
 
 # Results files and folders
 /results
+
