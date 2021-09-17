@@ -1,0 +1,70 @@
+server_url:
+  inhouse: http://127.0.0.1:4723/wd/hub
+
+timeouts:
+  seconds:
+    short: 2
+    medium: 5
+    long: 10
+
+strings:
+  running_details: 'Running test for: OS: <%= ENV['PLATFORM'] %>, Version: <%= ENV['OS_VERSION'] %>, Device Farm: <%= ENV['DEVICE_FARM'] %>'
+
+caps:
+  Android:
+    generic:
+      platformName: Android
+      automationName: UiAutomator2
+      enforceAppInstall: true
+      noReset: false
+      newCommandTimeout: 240
+      app: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+    '6':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "6"
+    '7':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "7"
+    '8.1':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "8.1"
+    '9':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "9.0"
+    '10':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "10.0"
+    '11':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "11.0"
+  IOS:
+    generic:
+      platformName: iOS
+      automationName: XCUITest
+      noReset: false
+      newCommandTimeout: 240
+      app: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/iOS.RealDevice.SauceLabs.Mobile.Sample.app.2.7.1.ipa
+      xcodeOrgId: <%= ENV['XCODE_ORG_ID'] %>
+      xcodeSigningId: iPhone Developer
+    '12':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "12"
+        udid: TBD
+    '13':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "13"
+        udid: TBD
+    '14':
+      inhouse:
+        deviceName: TBD
+        platformVersion: "14"
+        udid: TBD
+
