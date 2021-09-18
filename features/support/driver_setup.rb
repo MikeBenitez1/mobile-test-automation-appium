@@ -20,14 +20,14 @@ class DriverSetup
     end
 
     # This method loads and set up capabilities
-    # @param [string] scenario_name is the name to be set in Browserstack (if apply)
+    # @param [string] scenario_name is the name to be set in Remote Device Farm (if apply)
     def load_capabilities(scenario_name)
       # Defining desired capabilities hash to be called from selected environment file
       platform_caps = Config.caps[ENV["PLATFORM"]]
       generic_caps = platform_caps["generic"]
       device_farm_caps = platform_caps[ENV["DEVICE_FARM"]]
       unique_caps = platform_caps[ENV["OS_VERSION"]][ENV["DEVICE_FARM"]]
-      # definition of "build" and "name" dynamic capabilities for Browserstack
+      # definition of "build" and "name" dynamic capabilities for Remote Device Farm
       device_farm_caps["build"] = Time.now.strftime("%d/%m/%Y") if device_farm_caps.include? "build"
       device_farm_caps["name"] = scenario_name if device_farm_caps.include? "name"
 

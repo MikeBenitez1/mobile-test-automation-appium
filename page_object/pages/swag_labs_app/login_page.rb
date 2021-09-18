@@ -4,17 +4,19 @@
 
 class LoginPage
   class << self
-    include LoginElements
+    import_from('LoginElements')
 
     def validate_login_screen
-      find_element(:id, LoginElements::IMAGES[:swag_labs_image])
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_VIEWS[:login_copy]) }
     end
 
-    def login_with_valid_data
-      find_element(:id, LoginElements::TEXT_FIELDS[:email]).send_keys("mailo@hotmail.com")
-      find_element(:id, LoginElements::TEXT_FIELDS[:password]).send_keys("Test1234")
-      find_element(:id, LoginElements::BUTTONS[:login]).click
+    def valid_login
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:username_field]) }.send_keys('standard_user')
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:password_field]) }.send_keys('secret_sauce')
+      wait_for(LONG_TIME_OUT) { find_native_element(BUTTONS[:login_button]) }.click
     end
+
   end
+
 end
 
