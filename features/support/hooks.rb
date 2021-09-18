@@ -1,34 +1,30 @@
-# To start the Appium server automatically in local, currently not implemented due Browserstack integration which has his own Appium server
-# AfterConfiguration do |config|
-#   pid = spawn 'appium --address 0.0.0.0 --port 4723'
-#   Process.detach(pid)
-#   sleep(10)
+# Hooks to be executed in different stages of cucumber execution
 
 AfterConfiguration do
-  puts "Setting paths..."
+  # Setting the environment file
+  Config.load_environment
+  Config.load_config_file!
   EvidenceHandler.init_paths
-  puts "Running test for: '#{ENV["DEVICE"]}'"
+  puts Config.strings['running_details']
 end
 
-Before do
-  @driver.start_driver
-  hide_keyboard
+Before do |scenario|
+  DriverSetup.setup_driver(scenario)
+  EvidenceHandler.feature_scenario_path(scenario)
+  EvidenceHandler.counter(perform: :set)
 end
 
-AfterStep do |_results, step|
-  EvidenceHandler.take_screenshot(step)
+AfterStep do
+  path = EvidenceHandler.counter
+  attach(path, 'image/png') unless path.nil?
+  EvidenceHandler.path_to_nil
 end
 
 After do |scenario|
   if scenario.failed?
-    # TODO: handle failed test case and take a screenshot
+    ss_failure = EvidenceHandler.save(scenario)
+    attach(ss_failure, 'image/png')
   end
-  hide_keyboard
   @driver.driver_quit
 end
-
-# To kill the Appium server automatically in local, currently not implemented due Browserstack integration which has his own Appium server
-# at_exit do
-#   exec '/usr/bin/killall -KILL node'
-# end
 
