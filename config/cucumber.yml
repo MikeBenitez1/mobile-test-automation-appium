@@ -2,5 +2,5 @@
 
 # Generates a nice looking HTML report and prints pretty report on console.
 
-default: --format pretty --format html --out results/reports/<%=ENV['PLATFORM']%>/<%=Time.now.strftime('%F')%>/<%=Time.now.strftime('%H:%M:%S')%>_browser_report.html
+default: --format pretty --format html --out results/reports/<%=ENV['PLATFORM']%>/<%=Time.now.strftime('%F')%>/<%=Time.now.strftime('%H:%M:%S')%>_browser_report.html --publish-quiet
 

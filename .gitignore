@@ -1,6 +1,7 @@
 # Custom
 .idea
 vendor
+.bundle
 
 # Used by dotenv library to load environment variables.
 *.env

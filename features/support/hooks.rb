@@ -10,6 +10,7 @@ end
 
 Before do |scenario|
   DriverSetup.setup_driver(scenario)
+  @driver.start_driver
   EvidenceHandler.feature_scenario_path(scenario)
   EvidenceHandler.counter(perform: :set)
 end

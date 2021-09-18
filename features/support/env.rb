@@ -11,6 +11,7 @@ ENV["PLATFORM_MODULE"] = ENV["PLATFORM"].include?("IOS") ? "IOS" : "Android"
 
 require_all "./config"
 require_all "./handlers"
+require_all './utils'
 require_all "./page_object"
 
 

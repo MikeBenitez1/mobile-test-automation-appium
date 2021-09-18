@@ -49,8 +49,7 @@ caps:
       automationName: XCUITest
       noReset: false
       newCommandTimeout: 240
-      app: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/iOS.RealDevice.SauceLabs.Mobile.Sample.app.2.7.1.ipa
-      xcodeOrgId: <%= ENV['XCODE_ORG_ID'] %>
+      app: /Users/miguelangelbenitezgarcia/Downloads/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
       xcodeSigningId: iPhone Developer
     '12':
       inhouse:
@@ -64,7 +63,7 @@ caps:
         udid: TBD
     '14':
       inhouse:
-        deviceName: TBD
+        deviceName: iPhone 12 Pro Max
         platformVersion: "14"
-        udid: TBD
+        udid: 40231BB7-8A68-41CD-91C5-AEF74540D199
 

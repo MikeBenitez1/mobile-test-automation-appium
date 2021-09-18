@@ -4,11 +4,12 @@
 
 class HomePage
   class << self
-    include LoginElements
+    import_from('HomeElements')
 
     def validate_home_screen
-      find_element(:id, HomeElements::IMAGES[:start_image])
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_VIEWS[:home_copy]) }
     end
+
   end
 end
 
