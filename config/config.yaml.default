@@ -10,6 +10,10 @@ timeouts:
 strings:
   running_details: 'Running test for: OS: <%= ENV['PLATFORM'] %>, Version: <%= ENV['OS_VERSION'] %>, Device Farm: <%= ENV['DEVICE_FARM'] %>'
 
+credentials:
+  valid_user: 'standard_user'
+  valid_password: 'secret_sauce'
+
 caps:
   Android:
     generic:

@@ -38,7 +38,7 @@ class EvidenceHandler
       FileUtils.mkdir_p final_path unless Dir.exist? final_path
       file_name = screenshot_file_name(scenario.test_steps[counter(perform: :get)].text)
       path_to_failure = "#{final_path}/#{Time.now.strftime('%M%S')}_failed_#{file_name}.png"
-      save_screenshot(path_to_failure.to_s)
+      screenshot(path_to_failure.to_s)
       path_to_failure.to_s.tr('#', '')
     end
 
@@ -48,7 +48,7 @@ class EvidenceHandler
     def save_step(step)
       FileUtils.mkdir_p final_path unless Dir.exist? final_path
       path_to_ss = "#{final_path}/#{step.text}.png"
-      save_screenshot(path_to_ss.to_s)
+      screenshot(path_to_ss.to_s)
     end
 
     # Returns a string without special char " and replace spaces by underscore
@@ -64,7 +64,7 @@ class EvidenceHandler
       FileUtils.mkdir_p final_path unless Dir.exist? final_path
       file_name = screenshot_file_name(name)
       @path_to_evidence = "#{final_path}/#{Time.now.strftime('%M%S')}_#{file_name}.png"
-      save_screenshot(@path_to_evidence.to_s)
+      screenshot(@path_to_evidence.to_s)
     end
 
     # Saves Evidence on a path with Feature and Scenario Name
