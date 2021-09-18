@@ -27,13 +27,10 @@ class DriverSetup
       generic_caps = platform_caps["generic"]
       device_farm_caps = platform_caps[ENV["DEVICE_FARM"]]
       unique_caps = platform_caps[ENV["OS_VERSION"]][ENV["DEVICE_FARM"]]
-      # definition of "build" and "name" dynamic capabilities for Remote Device Farm
-      device_farm_caps["build"] = Time.now.strftime("%d/%m/%Y") if device_farm_caps.include? "build"
-      device_farm_caps["name"] = scenario_name if device_farm_caps.include? "name"
-
       [*generic_caps, *device_farm_caps, *unique_caps].to_h
     end
 
   end
+
 end
 

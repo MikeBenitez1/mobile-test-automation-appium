@@ -6,20 +6,20 @@ module HomeElements
   module IOS
 
     TEXT_VIEWS = {
-        home_copy: {
-            locator: :id,
-            element: "PRODUCTS"
-        }
+      home_copy: {
+        locator: :id,
+        element: 'PRODUCTS'
+      }
     }.freeze
   end
 
   module Android
 
     TEXT_VIEWS = {
-        home_copy: {
-            locator: :id,
-            element: "PRODUCTS"
-        }
+      home_copy: {
+        locator: :id,
+        element: 'PRODUCTS'
+      }
     }.freeze
   end
 

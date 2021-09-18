@@ -9,7 +9,7 @@ module Config
   ENV_FILE = "./config/#{ENV['KEYS']}.env".freeze
   ENV_REQUIRED = "./config/environment.env.default".freeze
 
-  CONFIG_KEYS = %w[caps server_url timeouts strings].freeze
+  CONFIG_KEYS = %w[caps server_url credentials timeouts strings].freeze
 
   # Loads required environment file, using this way is not required config.yaml
   # This improves CI implementation using environment variables instead config.yaml values

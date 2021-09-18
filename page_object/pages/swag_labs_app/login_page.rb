@@ -3,6 +3,7 @@
 # This class contains all the actions/validations can be done on swag labs login page for android and iOS
 
 class LoginPage
+
   class << self
     import_from('LoginElements')
 
@@ -11,8 +12,8 @@ class LoginPage
     end
 
     def valid_login
-      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:username_field]) }.send_keys('standard_user')
-      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:password_field]) }.send_keys('secret_sauce')
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:username_field]) }.send_keys(Config.credentials['valid_user'])
+      wait_for(LONG_TIME_OUT) { find_native_element(TEXT_FIELDS[:password_field]) }.send_keys(Config.credentials['valid_password'])
       wait_for(LONG_TIME_OUT) { find_native_element(BUTTONS[:login_button]) }.click
     end
 
