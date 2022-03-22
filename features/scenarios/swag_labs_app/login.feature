@@ -1,11 +1,11 @@
 # Author: miguel_301213@hotmail.com
-# Swag Labs Login Scenarios
+# Swag_Labs Login Scenarios
 
-  Feature: Swag Labs - Login
+  Feature: Swag_Labs - Login
 
-    @regression @login
-    Scenario: Swag labs user is able to login using a registered account
-      Given Swag labs user sees the "login" screen
-      When Swag labs user performs login with "valid" data
-      Then Swag labs user sees the "home" screen
+    @regression @happy_paths @login
+    Scenario: Swag_labs user is able to login successful using a registered account
+      Given Swag_labs user sees the "login" screen
+      When Swag_labs user performs login with "valid" data
+      Then Swag_labs user sees the "products" screen
 

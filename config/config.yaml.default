@@ -22,30 +22,32 @@ caps:
       enforceAppInstall: true
       noReset: false
       newCommandTimeout: 240
-      app: https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+      app: ./Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+      appPackage: com.swaglabsmobileapp
+      appActivity: com.swaglabsmobileapp.MainActivity
     '6':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your adb device ID"
         platformVersion: "6"
     '7':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your adb device ID"
         platformVersion: "7"
     '8.1':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your adb device ID"
         platformVersion: "8.1"
     '9':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your adb device ID"
         platformVersion: "9.0"
     '10':
       inhouse:
-        deviceName: TBD
+        deviceName: emulator-5554
         platformVersion: "10.0"
     '11':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your adb device ID"
         platformVersion: "11.0"
   IOS:
     generic:
@@ -53,21 +55,21 @@ caps:
       automationName: XCUITest
       noReset: false
       newCommandTimeout: 240
-      app: /Users/miguelangelbenitezgarcia/Downloads/iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
+      app: ./iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
       xcodeSigningId: iPhone Developer
     '12':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your device name"
         platformVersion: "12"
-        udid: TBD
+        udid: "Add your device UDID"
     '13':
       inhouse:
-        deviceName: TBD
+        deviceName: "Add your device name"
         platformVersion: "13"
         udid: TBD
     '14':
       inhouse:
-        deviceName: iPhone 12 Pro Max
+        deviceName: "Add your device name"
         platformVersion: "14"
-        udid: 40231BB7-8A68-41CD-91C5-AEF74540D199
+        udid: "Add your device UDID"
 

@@ -33,26 +33,26 @@ module LoginElements
   module Android
     BUTTONS = {
       login_button: {
-        locator: :id,
-        element: 'com.kueski.kueskiup.debug:id/nextButton'
+        locator: :accessibility_id,
+        element: 'test-LOGIN'
       }
     }.freeze
 
     TEXT_FIELDS = {
       username_field: {
-        locator: :xpath,
-        element: '//android.widget.EditText[@text="RFC"]'
+        locator: :accessibility_id,
+        element: 'test-Username'
       },
       password_field: {
-        locator: :xpath,
-        element: '//android.widget.EditText[@text="Contraseña"]'
+        locator: :accessibility_id,
+        element: 'test-Password'
       }
     }.freeze
 
     TEXT_VIEWS = {
       login_copy: {
-        locator: :accessibility_id,
-        element: 'The currently accepted usernames for this application are (tap to autofill):'
+        locator: :xpath,
+        element: '//android.widget.TextView[@text="The currently accepted usernames for this application are (tap to autofill):"]'
       }
     }.freeze
   end

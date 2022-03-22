@@ -1,7 +1,6 @@
 # mobile-test-automation-appium
 ## Personal project to practice mobile test automation with Appium, Cucumber and Ruby creating a framework from scratch including POM pattern, architecture definition/solutions, best practices, etc for iOS and Android SauceLabs example apps https://github.com/saucelabs/sample-app-mobile.
 
-
 ## Table of Contents
 
 1. [Requirements](#requirements)
@@ -15,12 +14,16 @@
 - Ruby >3.0.1
 - Cucumber >6.0.0
 - Appium >1.21.0
+- An Android/iOS device (Can be a real device, simulator or emulator)
+- IPA/APK build from https://github.com/saucelabs/sample-app-mobile in root folder project
 
 ## Getting Started
 
-### Install dependencies to collaborate (this can be used on Windows and Mac OS)
+### Install dependencies to collaborate and add automation scripts (this can be used on Windows and Mac OS)
 
-* Install Ruby (any version higher than 3.0.1) from terminal with `rvm install ruby`.
+* Install rvm with `\curl -sSL https://get.rvm.io | bash -s stable`.
+
+* Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
 
 * Install the Android SDK (latest version https://developer.android.com/studio#downloads) and set up ANDROID_HOME on your .zshrc or .bash_profile depending your shell.
 
@@ -28,9 +31,7 @@
 
 * Install the JDK (latest version https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) and set up JAVA_HOME on your .zshrc or .bash_profile depending your shell.
 
-* Install Appium (latest version) from terminal with `npm install -g appium` to install the console version or install the last Appium Desktop App version from https://github.com/appium/appium-desktop/releases both works same, the only difference is that the desktop one has included the Appium Inspector tool.
-
-* Install Appium client from terminal with `npm install wd` or if you will import the Appium libraries/gems in the repository, it is enough.
+* Install Appium server (latest version) from terminal with `npm install -g appium`.
 
 * Install Node.js (required for Appium doctor) from terminal with `brew install node`.
 
@@ -40,20 +41,22 @@
 
 ### Install dependencies just to run the test cases locally (this can be used on Windows and Mac OS)
 
-* Install Ruby (any version higher than 2.3) from terminal with `rvm install ruby`.
+* Install rvm with `\curl -sSL https://get.rvm.io | bash -s stable`.
 
-* Install Appium (latest version) from terminal with `npm install -g appium` to install the console version or install the last Appium Desktop App version from https://github.com/appium/appium-desktop/releases both works same, the only difference is that the desktop one has included the Appium Inspector tool.
+* Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
+
+* Install Appium server (latest version) from terminal with `npm install -g appium`.
 
 * Install the gem bundle from terminal inside the repository with `gem install bundler` > `bundle install`.
 
-### Configure the local environment file
+### Select/Setup a local environment file
 
-* Regarding values from environment.env.default file ask for them to the repository owner, put them in ./config/keys.env and load from terminal with
+* If you want to handle more sensitive data on the project you can add a `./config/keys.env` file and call them from `./config/config.yaml.config` file, to load the keys file from terminal just type
 ```
 export KEYS=keys
 ```
 
-* To select where to run the TCs, on terminal just select OS, Version and Device farm with below commands e.g
+* To select where to run the TCs, on terminal just select OS platform, OS version and Device farm with below commands e.g
 ```
 export OS_VERSION=14
 ```
@@ -66,7 +69,7 @@ DEVICE_FARM=inhouse
 
 ## Tests Execution
 
-The following tasks can be executed manually locally but are planned to be executed automatically in a pipeline.
+The following tasks can be triggered manually locally but can be integrated to a pipeline to run automatically.
 
 * To run the test by scenario name use the following command:
 ```
