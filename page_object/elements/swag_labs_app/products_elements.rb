@@ -7,8 +7,8 @@ module ProductsElements
 
     TEXT_VIEWS = {
       products_copy: {
-        locator: :id,
-        element: 'PRODUCTS'
+        locator: :xpath,
+        element: '//XCUIElementTypeStaticText[@name="PRODUCTS"] | //XCUIElementTypeStaticText[@name="PRODUCTOS"]'
       }
     }.freeze
   end
@@ -18,7 +18,7 @@ module ProductsElements
     TEXT_VIEWS = {
       products_copy: {
         locator: :xpath,
-        element: '//android.widget.TextView[@text="The currently accepted usernames for this application are (tap to autofill):"]'
+        element: '//android.widget.TextView[@text="PRODUCTS"] | //android.widget.TextView[@text="PRODUCTOS"]'
       }
     }.freeze
   end

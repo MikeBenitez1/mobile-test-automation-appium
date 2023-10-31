@@ -1,5 +1,5 @@
 server_url:
-  inhouse: http://127.0.0.1:4723/wd/hub
+  inhouse: http://127.0.0.1:4723/
 
 timeouts:
   seconds:
@@ -21,7 +21,9 @@ caps:
       automationName: UiAutomator2
       enforceAppInstall: true
       noReset: false
-      newCommandTimeout: 240
+      fullReset: true
+      newCommandTimeout: 360
+      autoGrantPermissions: true
       app: ./Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
       appPackage: com.swaglabsmobileapp
       appActivity: com.swaglabsmobileapp.MainActivity
@@ -54,7 +56,9 @@ caps:
       platformName: iOS
       automationName: XCUITest
       noReset: false
-      newCommandTimeout: 240
+      fullReset: true
+      newCommandTimeout: 360
+      autoAcceptAlerts: true
       app: ./iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
       xcodeSigningId: iPhone Developer
     '12':

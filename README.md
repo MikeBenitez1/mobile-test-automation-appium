@@ -15,7 +15,7 @@
 
 - Ruby >3.0.1
 - Cucumber >6.0.0
-- Appium >1.21.0
+- Appium >2.0.1
 - An Android/iOS device (Can be a real device, simulator or emulator)
 - IPA/APK build from https://github.com/saucelabs/sample-app-mobile in root folder project
 
@@ -27,19 +27,25 @@
 
 * Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
 
-* Install the Android SDK (latest version https://developer.android.com/studio#downloads) and set up ANDROID_HOME on your .zshrc or .bash_profile depending your shell.
+* Install the Android SDK (latest version https://developer.android.com/studio#downloads) and set up `export ANDROID_HOME=/Users/{YOUR_USER_NAME}/Library/Android/sdk` and `export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools` on your .zshrc or .bash_profile depending your shell.
 
 * Install Xcode (latest version https://developer.apple.com/xcode/ )
 
-* Install the JDK (latest version https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) and set up JAVA_HOME on your .zshrc or .bash_profile depending your shell.
+* Install the JDK (latest version https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) and set up JAVA_HOME on your .zshrc or .bash_profile depending your shell.
 
-* Install Appium server (latest version) from terminal with `npm install -g appium`.
+* Install Homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-* Install Node.js (required for Appium doctor) from terminal with `brew install node`.
+* Install nodeJS with `brew install node`.
 
-* Install the gem bundle from terminal inside the repository with `gem install bundler` > `bundle install`.
+* Install Appium server (recommended version 2.0.1) on terminal with `npm install -g appium@2.0.1`.
 
-* Finally install Appium Doctor from terminal with `npm install appium-doctor -g` this tool will validate if all the previous setup are well configured to start to use Appium, from terminal just run `appium-doctor`.
+* Install Appium drivers on terminal with  `appium driver install xcuitest` and `appium driver install uiautomator2`.
+
+* Install the gem bundle and ruby gems with terminal inside the repository with `gem install bundler` > `bundle install`.
+
+* Finally install Appium Doctor on terminal with `npm install @appium/doctor@2.0.1 -g` this tool will validate if all the previous setup are well configured to start to use Appium, once appium-doctor is installed on terminal just run `appium-doctor`.
+
+* To setup an iOS real device please refer to https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
 
 ### Install dependencies just to run the test cases locally (this can be used on Windows and Mac OS)
 
@@ -47,9 +53,17 @@
 
 * Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
 
-* Install Appium server (latest version) from terminal with `npm install -g appium`.
+* Install Homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-* Install the gem bundle from terminal inside the repository with `gem install bundler` > `bundle install`.
+* Install nodeJS with `brew install node`.
+
+* Install Appium server (recommended version 2.0.1) on terminal with `npm install -g appium@2.0.1`.
+
+* Install Appium drivers on terminal with  `appium driver install xcuitest` and `appium driver install uiautomator2`.
+
+* Install the gem bundle and ruby gems with terminal inside the repository with `gem install bundler` > `bundle install`.
+
+* Finally install Appium Doctor on terminal with `npm install @appium/doctor@2.0.1 -g` this tool will validate if all the previous setup are well configured to start to use Appium, once appium-doctor is installed on terminal just run `appium-doctor`.
 
 ### Select/Setup a local environment file
 
@@ -60,13 +74,7 @@ export KEYS=keys
 
 * To select where to run the TCs, on terminal just select OS platform, OS version and Device farm with below commands e.g
 ```
-export OS_VERSION=14
-```
-```
-export PLATFORM=IOS
-```
-```
-DEVICE_FARM=inhouse
+export PLATFORM=IOS && export DEVICE_FARM=inhouse && export OS_VERSION=16
 ```
 
 ## Tests Execution
