@@ -3,7 +3,7 @@
 
   Feature: Swag_Labs - Login
 
-    @regression @happy_paths @login
+    @smoke_test @full_regression_suite @happy_paths @login
     Scenario: Swag_labs user is able to login successful using a registered account
       Given Swag_labs user sees the "login" screen
       When Swag_labs user performs login with "valid" data

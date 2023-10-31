@@ -1,6 +1,8 @@
 # Cucumber profiles for automation execution
 
-# Generates a nice looking HTML report and prints pretty report on console.
+# Generates a nice looking HTML file report and prints pretty report on console.
+default: --format pretty --format rerun --out rerun.txt --format html --out results/reports/<%=ENV['PLATFORM']%>/<%=ENV['PLATFORM']%>_browser_report.html --publish-quiet --retry 1
+default_without_override_rerun: --format pretty --format html --out results/reports/<%=ENV['PLATFORM']%>/<%=ENV['PLATFORM']%>_browser_rerun_report.html --publish-quiet
 
-default: --format pretty --format html --out results/reports/<%=ENV['PLATFORM']%>/<%=Time.now.strftime('%F')%>/<%=Time.now.strftime('%H:%M:%S')%>_browser_report.html --publish-quiet
-
+# Re-run failed scenarios previously saved at rerun.txt
+rerun_failed: '@rerun.txt -p default_without_override_rerun'
