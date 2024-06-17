@@ -1,4 +1,4 @@
-# Here you can add any Gems that you're using for your project, just run "bundle install" command to add them.
+# Here you can add any specific gems that you need for your project, just run "bundle install" command to install them.
 
 source 'https://rubygems.org'
 
