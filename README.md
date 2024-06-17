@@ -1,7 +1,7 @@
 # mobile-test-automation-appium
 ## Personal project to practice mobile test automation with Appium, Cucumber and Ruby creating a framework from scratch including POM pattern, structure definition, best practices, etc for iOS and Android SauceLabs example apps https://github.com/saucelabs/my-demo-app-android and https://github.com/saucelabs/my-demo-app-ios.
 
-![execution](https://user-images.githubusercontent.com/59778782/159393006-f90f5837-3a8b-4adc-9732-9d66b110e7ef.gif)
+![video (4)](https://github.com/MikeBenitez1/mobile-test-automation-appium/assets/59778782/bcdb8ce0-8e7f-439d-aff4-1a1c893d7bf0)
 
 ## Table of Contents
 
