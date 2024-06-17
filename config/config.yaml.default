@@ -24,9 +24,7 @@ caps:
       fullReset: true
       newCommandTimeout: 360
       autoGrantPermissions: true
-      app: ./Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
-      appPackage: com.swaglabsmobileapp
-      appActivity: com.swaglabsmobileapp.MainActivity
+      app: ./mda-2.0.2-23.apk
     '6':
       inhouse:
         deviceName: "Add your adb device ID"
@@ -45,11 +43,11 @@ caps:
         platformVersion: "9.0"
     '10':
       inhouse:
-        deviceName: emulator-5554
+        deviceName: "Add your adb device ID"
         platformVersion: "10.0"
     '11':
       inhouse:
-        deviceName: "Add your adb device ID"
+        deviceName: "ZY32D5BJDB"
         platformVersion: "11.0"
   IOS:
     generic:
@@ -59,7 +57,7 @@ caps:
       fullReset: true
       newCommandTimeout: 360
       autoAcceptAlerts: true
-      app: ./iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.1.app
+      app: ./SauceLabs-Demo-App.ipa
       xcodeSigningId: iPhone Developer
     '12':
       inhouse:

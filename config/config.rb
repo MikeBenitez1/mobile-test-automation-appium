@@ -31,7 +31,7 @@ module Config
   end
 
   def self.load_config_file!
-    @config = YAML.safe_load(ERB.new(File.read(CONFIG_DEFAULT_PATH)).result, [Symbol])
+    @config = YAML.safe_load(ERB.new(File.read(CONFIG_DEFAULT_PATH)).result, aliases: true)
   end
 
   class << self

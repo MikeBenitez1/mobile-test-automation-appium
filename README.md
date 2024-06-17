@@ -13,27 +13,25 @@
 
 ## Requirements
 
-- Ruby >3.0.1
+- Ruby >3.3.1
 - Cucumber >6.0.0
 - Appium >2.0.1
 - An Android/iOS device (Can be a real device, simulator or emulator)
-- IPA/APK build from https://github.com/saucelabs/sample-app-mobile in root folder project
+- IPA/APK build from https://github.com/saucelabs/my-demo-app-android or https://github.com/saucelabs/my-demo-app-ios in project root folder
 
 ## Getting Started
 
-### Install dependencies to collaborate and add automation scripts (this can be used on Windows and Mac OS)
+### Install these dependencies to collaborate, run or add automation scripts (this can be used on Windows and Mac OS)
 
-* Install rvm with `\curl -sSL https://get.rvm.io | bash -s stable`.
+* Install rbenv and ruby 3.3.1 following https://collectionbuilder.github.io/cb-docs/docs/software/ruby_mac/.
 
-* Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
+* Install the Android SDK (latest version https://developer.android.com/studio#downloads) and set up ANDROID_HOME on your .zshrc or .bash_profile depending your shell.
 
-* Install the Android SDK (latest version https://developer.android.com/studio#downloads) and set up `export ANDROID_HOME=/Users/{YOUR_USER_NAME}/Library/Android/sdk` and `export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools` on your .zshrc or .bash_profile depending your shell.
-
-* Install Xcode (latest version https://developer.apple.com/xcode/ )
+* Install Xcode (latest version https://developer.apple.com/xcode/ ).
 
 * Install the JDK (latest version https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) and set up JAVA_HOME on your .zshrc or .bash_profile depending your shell.
 
-* Install Homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+* Install Homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
 
 * Install nodeJS with `brew install node`.
 
@@ -43,27 +41,14 @@
 
 * Install the gem bundle and ruby gems with terminal inside the repository with `gem install bundler` > `bundle install`.
 
-* Finally install Appium Doctor on terminal with `npm install @appium/doctor@2.0.1 -g` this tool will validate if all the previous setup are well configured to start to use Appium, once appium-doctor is installed on terminal just run `appium-doctor`.
+* Finally install Appium Doctor on terminal with `npm install @appium/doctor@2.0.1 -g`.
 
-* To setup an iOS real device please refer to https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
+* To validate if all the previous setup are well configured to start to use Appium just run `appium-doctor`.
 
-### Install dependencies just to run the test cases locally (this can be used on Windows and Mac OS)
+* To setup an iOS real device please refer to https://appium.readthedocs.io/en/latest/en/drivers/ios-xcuitest-real-devices/.
 
-* Install rvm with `\curl -sSL https://get.rvm.io | bash -s stable`.
+* (Optional) To inspect UI elements you can download Appium Inspector from https://github.com/appium/appium-inspector/releases.
 
-* Install Ruby (3.0.1) on terminal with `rvm install "ruby-3.0.1"`.
-
-* Install Homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-* Install nodeJS with `brew install node`.
-
-* Install Appium server (recommended version 2.0.1) on terminal with `npm install -g appium@2.0.1`.
-
-* Install Appium drivers on terminal with  `appium driver install xcuitest` and `appium driver install uiautomator2`.
-
-* Install the gem bundle and ruby gems with terminal inside the repository with `gem install bundler` > `bundle install`.
-
-* Finally install Appium Doctor on terminal with `npm install @appium/doctor@2.0.1 -g` this tool will validate if all the previous setup are well configured to start to use Appium, once appium-doctor is installed on terminal just run `appium-doctor`.
 
 ### Select/Setup a local environment file
 
