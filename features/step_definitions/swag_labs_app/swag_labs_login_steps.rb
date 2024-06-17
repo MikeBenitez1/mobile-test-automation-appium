@@ -1,6 +1,6 @@
 # Cucumber steps which applies to Login related scenarios
 
-When(/^Swag_labs user performs login with "([^"]*)" data$/) do |data_type|
+When(/^User performs login with "([^"]*)" data$/) do |data_type|
   case data_type
   when 'valid'
     LoginPage.valid_login

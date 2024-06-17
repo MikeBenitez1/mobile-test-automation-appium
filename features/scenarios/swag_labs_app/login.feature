@@ -5,7 +5,9 @@
 
     @smoke_test @full_regression_suite @happy_paths @login
     Scenario: Swag_labs user is able to login successful using a registered account
-      Given Swag_labs user sees the "login" screen
-      When Swag_labs user performs login with "valid" data
-      Then Swag_labs user sees the "products" screen
+      Given User sees the "catalog" screen
+      When User clicks the "menu" button
+      And User clicks the "login" button
+      When User performs login with "valid" data
+      Then User sees the "catalog" screen
 
