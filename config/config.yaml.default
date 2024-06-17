@@ -11,8 +11,8 @@ strings:
   running_details: 'Running test for: OS: <%= ENV['PLATFORM'] %>, Version: <%= ENV['OS_VERSION'] %>, Device Farm: <%= ENV['DEVICE_FARM'] %>'
 
 credentials:
-  valid_user: 'standard_user'
-  valid_password: 'secret_sauce'
+  valid_user: 'bod@example.com'
+  valid_password: '10203040'
 
 caps:
   Android:
@@ -24,6 +24,8 @@ caps:
       fullReset: true
       newCommandTimeout: 360
       autoGrantPermissions: true
+      appPackage: com.saucelabs.mydemoapp.android
+      appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
       app: ./mda-2.0.2-23.apk
     '6':
       inhouse:

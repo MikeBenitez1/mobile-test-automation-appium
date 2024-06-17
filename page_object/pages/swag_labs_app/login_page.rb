@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This class contains all the actions/validations can be done on swag labs login page for android and iOS
+# This class contains all the actions/validations can be done on login page for android and iOS
 
 class LoginPage
 
